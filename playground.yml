@@ -10,3 +10,7 @@
   - name: Do something
     debug:
       msg: "System {{ top_secret_password }}"
+    # requires -vvvv to be executed
+    # debug:
+    #   var: hostvars[inventory_hostname]
+    #   verbosity: 4

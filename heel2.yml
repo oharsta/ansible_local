@@ -1,0 +1,12 @@
+- name: run the playbook tasks on the localhost
+  hosts: localhost
+  tasks:
+
+  - name: Read vars from secrets file
+    include_vars: "{{ secrets_file }}"
+    tags:
+      - always
+
+  - name: Do something
+    debug:
+      msg: "System {{ top_secret_password }}"
